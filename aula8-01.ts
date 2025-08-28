@@ -1,25 +1,26 @@
+const digite = require('readline-sync');
 
-import readline = require("readline-sync");
+const cores: string [] = [];
 
-const cores: string[] = [];
+console.log('digite 5 cores: ')
+for (let contador = 0; contador < 5; contador += 1) {
+    const  cor = digite.question(`cor ${contador + 1} : `);
 
-console.log("Por favor, digite 5 cores:");
-for (let i = 0; i < 5; i++) {
-
-    const corDigitada = readline.question(`Digite a ${i + 1}a cor: `);
-    
-    
-    cores.push(corDigitada);
-}
-
-console.log("\nSuas cores:");
-for (const cor of cores) {
+    cores.push(cor);
+    }
+console.log(`\nCores armazenadas: `);
+for ( const cor of cores) {
     console.log(cor);
-}
-
+    } 
 cores.sort();
-
-console.log("\nSuas cores em ordem alfabética:");
+console.log(`\nCores em ordem alfabética: `);
 for (const cor of cores) {
     console.log(cor);
-}
+    }
+console.log(`\nCores em ordem alfabética inversa: `);
+cores.reverse();
+for(const cor of cores) {
+    console.log(cor);
+    }
+    console.log(`fim do programa`);
+    
