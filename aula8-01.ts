@@ -1,5 +1,5 @@
-const digite = require('readline-sync');
-
+import * as readline from 'readline-sync';
+const digite = readline;
 const cores: string [] = [];
 
 console.log('digite 5 cores: ')
